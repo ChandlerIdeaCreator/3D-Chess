@@ -1,6 +1,14 @@
 # 3D Chess
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+<p align="center">
+  <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT" /></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite" /></a>
+  <a href="https://threejs.org/"><img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=threedotjs&logoColor=white" alt="Three.js" /></a>
+  <img src="https://img.shields.io/badge/JavaScript-ES%20Modules-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript ES Modules" />
+  <img src="https://img.shields.io/badge/Node.js-%3E%3D%2018-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node.js 18+" />
+  <img src="https://img.shields.io/badge/AI-Claude%20Code%20%2B%20DeepSeek-7C3AED?style=flat-square" alt="Claude Code + DeepSeek" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs welcome" />
+</p>
 
 **Author:** [ChandlerIdeaCreator](https://github.com/ChandlerIdeaCreator) — Northeastern University (NEU / 东北大学)
 
