@@ -1,0 +1,7 @@
+node_modules/
+dist/
+Download_path.md
+README.md
+/show_figure1.png
+/show_figure2.png
+.claude/settings.local.json

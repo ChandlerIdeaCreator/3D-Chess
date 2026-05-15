@@ -1,0 +1,80 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { overflow: hidden; width: 100%; height: 100%; }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a2e; }
+canvas { display: block; }
+
+#ui-container {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#status-bar {
+    position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+    background: rgba(0,0,0,0.75); color: #fff;
+    padding: 10px 28px; border-radius: 8px;
+    font-size: 18px; font-weight: 600;
+    pointer-events: auto;
+    text-align: center;
+    min-width: 220px;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s;
+}
+#status-bar.turn-white { border-bottom: 3px solid #f5f5dc; }
+#status-bar.turn-black { border-bottom: 3px solid #2f1b0e; }
+#status-bar.check { animation: pulse 0.8s infinite; border-bottom-color: #ff4444; }
+#status-bar.checkmate { color: #ff4444; font-size: 24px; }
+#status-bar.stalemate { color: #ffaa00; font-size: 24px; }
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255,68,68,0.6); }
+    50% { box-shadow: 0 0 16px 4px rgba(255,68,68,0.3); }
+}
+
+#promotion-dialog {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.88); border-radius: 12px;
+    padding: 20px 24px;
+    display: flex; flex-direction: column; align-items: center; gap: 12px;
+    pointer-events: auto;
+    backdrop-filter: blur(8px);
+}
+#promotion-dialog.hidden { display: none; }
+#promotion-dialog .prompt-text {
+    color: #ccc; font-size: 16px; margin-bottom: 4px;
+}
+#promotion-dialog .btn-row {
+    display: flex; gap: 12px;
+}
+#promotion-dialog button {
+    width: 64px; height: 64px; border-radius: 8px;
+    border: 2px solid #888; background: #222;
+    color: #fff; font-size: 32px; cursor: pointer;
+    transition: all 0.15s;
+    line-height: 1;
+}
+#promotion-dialog button:hover {
+    border-color: #fff; background: #444; transform: scale(1.1);
+}
+
+#capture-display-white,
+#capture-display-black {
+    position: absolute; pointer-events: auto;
+    display: flex; flex-wrap: wrap; gap: 1px;
+    max-width: 180px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 6px; padding: 4px 6px;
+    font-size: 18px; line-height: 1.2;
+}
+#capture-display-white { top: 100px; right: 16px; }
+#capture-display-black { bottom: 100px; right: 16px; }
+
+@media (max-width: 768px) {
+    #status-bar { font-size: 14px; padding: 6px 16px; top: 8px; min-width: 160px; }
+    #promotion-dialog { padding: 14px 18px; gap: 8px; }
+    #promotion-dialog button { width: 48px; height: 48px; font-size: 24px; }
+    #capture-display-white { top: 70px; right: 8px; font-size: 14px; max-width: 120px; }
+    #capture-display-black { bottom: 70px; right: 8px; font-size: 14px; max-width: 120px; }
+}
