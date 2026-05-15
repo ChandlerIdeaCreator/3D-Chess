@@ -7,9 +7,9 @@
 A browser-based **3D chess** experience built with **Three.js** and **Vite**. It features a minimalist board, stylized piece models, soft lighting with cast shadows, and a lightweight HUD for game state (including turn tracking).
 
 <p align="center">
-  <img src="./show_figure1.png" alt="3D Chess — isometric view with White's turn indicator" width="400" />
+  <img src="./show_figure1.png" alt="3D Chess — isometric view with White's turn indicator" height="400" />
   &nbsp;&nbsp;
-  <img src="./show_figure2.png" alt="3D Chess — perspective view from Black's side" width="400" />
+  <img src="./show_figure2.png" alt="3D Chess — perspective view from Black's side" height="400" />
 </p>
 
 > **AI-assisted development (important):**  
